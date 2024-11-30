@@ -5,8 +5,7 @@ class LayoutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(
+    return Container(
         color: Colors.red,
         margin: const EdgeInsets.fromLTRB(40, 80, 40, 80),
         child: Column(
@@ -71,7 +70,7 @@ class LayoutView extends StatelessWidget {
             )
           ],
         ),
-      ),
+  
     );
   }
 }

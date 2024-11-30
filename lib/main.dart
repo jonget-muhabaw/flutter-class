@@ -1,20 +1,25 @@
-import 'package:class_one/calculator_app.dart';
+import 'package:class_one/components/screens/calculator_screen.dart';
+import 'package:class_one/components/screens/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:math_expressions/math_expressions.dart';
 
 void main() {
-  runApp(const CalculatorApp());
+  runApp(MyApp());
+  Map route = {"name": "Alex", "age": 25};
 }
 
-class CalculatorApp extends StatelessWidget {
-  const CalculatorApp({super.key});
+class MyApp extends StatelessWidget {
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: CalculatorScreen(),
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginScreen(),
+        '/home': (context) => CalculatorScreen(),
+        
+      },
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
