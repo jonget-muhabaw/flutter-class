@@ -1,3 +1,4 @@
+import 'package:class_one/components/screens/my_button.dart';
 import 'package:class_one/components/screens/my_form.dart';
 import 'package:flutter/material.dart';
 
@@ -42,30 +43,24 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               child: Form(
                 key: _formKey,
-                child: Column(
+                child: const Column(
                   children: [
-                    const SizedBox(
+                    SizedBox(
                       height: 20,
                     ),
                     MyForm(
-                      icon: const Icon(Icons.person),
-                      hintTex: "Username",
+                      hintTex: "Enter name",
+                      icon: Icon(Icons.person),
                       obscureTex: false,
                     ),
-                    const SizedBox(
-                      height: 30,
+                    SizedBox(
+                      height: 10,
                     ),
                     MyForm(
-                        icon: const Icon(Icons.email),
-                        hintTex: "Email",
-                        obscureTex: false),
-                    const SizedBox(
-                      height: 20,
+                      hintTex: "Enter Email",
+                      icon: Icon(Icons.email),
+                      obscureTex: false,
                     ),
-                    MyForm(
-                        icon: const Icon(Icons.key),
-                        hintTex: "password",
-                        obscureTex: true)
                   ],
                 ),
               ),
@@ -74,26 +69,25 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 50,
             ), //login button
             GestureDetector(
-              onTap: () {
-                if (_formKey.currentState!.validate()) {
-                  Navigator.pushNamed(context, '/home');
-                }
-              },
-              child: Container(
-                color: Colors.black,
-                height: 50,
-                width: MediaQuery.of(context).size.width * 0.8,
-                child: const Center(
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 13,
-                        fontWeight: FontWeight.bold),
+                onTap: () {
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.pushNamed(context, "/home");
+                  }
+                },
+                child: Container(
+                  color: Colors.black,
+                  height: MediaQuery.of(context).size.height * 0.06,
+                  width: MediaQuery.of(context).size.width * 0.85,
+                  child: const Center(
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
-                ),
-              ),
-            )
+                ))
           ],
         ),
       ),

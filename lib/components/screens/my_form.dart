@@ -4,7 +4,7 @@ class MyForm extends StatelessWidget {
   final String hintTex;
   final bool obscureTex;
   final Widget icon;
-  MyForm({super.key, required this.hintTex, required this.obscureTex, required this.icon});
+  const MyForm({super.key, required this.hintTex, required this.obscureTex, required this.icon});
 
   @override
   Widget build(BuildContext context) {

@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 
 class TwoDView extends StatelessWidget {
   TwoDView({super.key});
-  List<String> menu = ["Fast Food", "Hot Drinks", "Alcohols", "Soft Drinks"];
+  final List<String> menu = [
+    "Fast Food",
+    "Hot Drinks",
+    "Alcohols",
+    "Soft Drinks"
+  ];
   @override
   Widget build(BuildContext context) {
     return Padding(

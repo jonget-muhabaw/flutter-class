@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:expressions/expressions.dart';
 
@@ -35,7 +33,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
   String _calculate(String input) {
     var exp = Expression.parse(input);
-    var evaluator = ExpressionEvaluator();
+    var evaluator = const ExpressionEvaluator();
     // var context = {};
     var result = evaluator.eval(exp, {});
     return result;

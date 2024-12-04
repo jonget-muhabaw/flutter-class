@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LayoutView extends StatelessWidget {
-  LayoutView({super.key});
+  const LayoutView({super.key});
 
   @override
   Widget build(BuildContext context) {

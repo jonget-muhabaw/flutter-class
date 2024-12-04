@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+
+class MyCircle extends StatelessWidget {
+  final String child;
+  const MyCircle({super.key, required this.child});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(4.0),
+      child: Container(
+        height: 100,
+        width: 100,
+        decoration: const BoxDecoration(
+          color: Colors.pink,
+          shape: BoxShape.circle,
+        ),
+        child: Center(
+          child: Text(
+            child,
+            style: const TextStyle(fontSize: 20),
+          ),
+        ),
+      ),
+    );
+  }
+}
