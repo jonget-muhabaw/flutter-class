@@ -1,6 +1,5 @@
 import 'package:class_one/components/screens/calculator_screen.dart';
 import 'package:class_one/components/screens/home.dart';
-import 'package:class_one/components/screens/home_screen.dart';
 import 'package:class_one/components/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomeScreen(),
-        '/home': (context) => const CalculatorScreen(),
+        '/': (context) => const LoginScreen(),
+        '/home': (context) => const HomeScreen(),
+        
       },
       debugShowCheckedModeBanner: false,
     );
