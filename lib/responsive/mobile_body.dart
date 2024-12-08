@@ -5,40 +5,10 @@ class MobileBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("M O B I L E"),
-      ),
-      backgroundColor: Colors.grey.shade300,
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8),
-              child: AspectRatio(
-                aspectRatio: 16 / 9,
-                child: Container(
-                  height: 250,
-                  color: Colors.deepPurple[400],
-                ),
-              ),
-            ),
-            //recommend videos
-            Expanded(
-                child: ListView.builder(
-                    itemCount: 8,
-                    itemBuilder: (contex, index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          color: Colors.deepPurple[300],
-                          height: 120,
-                        ),
-                      );
-                    }))
-          ],
-        ),
+    return const Scaffold(
+      backgroundColor: Colors.deepOrange,
+      body: Center(
+        child: Text("Mobile screen"),
       ),
     );
   }
