@@ -49,17 +49,17 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 20,
                     ),
                     MyForm(
-                      hintTex: "Enter name",
+                      hintText: "Enter name",
                       icon: Icon(Icons.person),
-                      obscureTex: false,
+                      obscureText: false,
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     MyForm(
-                      hintTex: "Enter Email",
+                      hintText: "Enter Email",
                       icon: Icon(Icons.email),
-                      obscureTex: false,
+                      obscureText: false,
                     ),
                   ],
                 ),
