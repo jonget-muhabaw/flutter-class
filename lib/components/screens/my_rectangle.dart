@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class MyRectangle extends StatelessWidget {
-  MyRectangle({super.key, required this.title, required this.productIcon});
-  String title;
-  Widget productIcon;
+  const MyRectangle({super.key, required this.title, required this.productImage});
+  
+  final String title;
+  final Widget productImage;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,16 +17,15 @@ class MyRectangle extends StatelessWidget {
           margin: const EdgeInsets.only(top: 35),
           child: Column(
             children: [
-              productIcon,
-              const SizedBox(
-                height: 15,
-              ),
+             productImage,
+              const SizedBox(height: 15),
               Text(
                 title,
                 style: const TextStyle(
-                    fontSize: 14,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
+                  fontSize: 14,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ],
           ),

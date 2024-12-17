@@ -1,5 +1,5 @@
-import 'package:class_one/components/screens/calculator_screen.dart';
-import 'package:class_one/components/screens/home.dart';
+
+import 'package:class_one/components/screens/gridview_screen.dart';
 import 'package:class_one/components/screens/listview_screen.dart';
 import 'package:class_one/components/screens/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const LoginScreen(),
         '/home': (context) =>  ListviewScreen(),
+        '/detail':(context)=> const GridviewScreen(),
       },
       debugShowCheckedModeBanner: false,
     );
