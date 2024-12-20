@@ -1,4 +1,3 @@
-
 import 'package:class_one/components/screens/gridview_screen.dart';
 import 'package:class_one/components/screens/listview_screen.dart';
 import 'package:class_one/components/screens/login_screen.dart';
@@ -17,8 +16,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const LoginScreen(),
-        '/home': (context) =>  ListviewScreen(),
-        '/detail':(context)=> const GridviewScreen(),
+        '/home': (context) => GridviewScreen(),
+        '/detail': (context) => ListviewScreen(),
       },
       debugShowCheckedModeBanner: false,
     );
