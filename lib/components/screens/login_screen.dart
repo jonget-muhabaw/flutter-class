@@ -1,15 +1,9 @@
-import 'package:class_one/components/screens/my_button.dart';
 import 'package:class_one/components/screens/my_form.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  LoginScreen({super.key});
 
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -74,19 +68,34 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.pushNamed(context, "/home");
                   }
                 },
-                child: Container(
-                  color: Colors.black,
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  width: MediaQuery.of(context).size.width * 0.85,
-                  child: const Center(
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold),
+                child: Column(
+                  spacing: 20,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      alignment: Alignment.centerRight,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/counter');
+                        },
+                        child: const Text("Go To Counter APP"),
+                      ),
                     ),
-                  ),
+                    Container(
+                      color: Colors.black,
+                      height: MediaQuery.of(context).size.height * 0.06,
+                      width: MediaQuery.of(context).size.width * 0.85,
+                      child: const Center(
+                        child: Text(
+                          "Login",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ],
                 ))
           ],
         ),

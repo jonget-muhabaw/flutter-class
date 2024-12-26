@@ -13,6 +13,14 @@ class GridviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/addTodo');
+            },
+            child: Text("Go to task"),
+          ),
+        ),
         body: GridView.builder(
             itemCount: myStory.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

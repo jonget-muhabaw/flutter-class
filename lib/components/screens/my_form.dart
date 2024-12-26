@@ -4,11 +4,18 @@ class MyForm extends StatelessWidget {
   final String hintText;
   final bool obscureText;
   final Widget icon;
-  const MyForm({super.key, required this.hintText, required this.obscureText, required this.icon});
+  final TextEditingController? todoController;
+  const MyForm(
+      {super.key,
+      required this.hintText,
+      required this.obscureText,
+      required this.icon,
+      this.todoController});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+        controller: todoController,
         obscureText: obscureText,
         decoration: InputDecoration(
             prefixIcon: icon,
@@ -27,3 +34,12 @@ class MyForm extends StatelessWidget {
         });
   }
 }
+// class ValidationProvider extends ChangeNotifier{
+//   String _validate='';
+//   get validate=>_validate;
+
+//   isFormValid(){
+//     if(!va)
+//   }
+  
+// }
