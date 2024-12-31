@@ -1,3 +1,4 @@
+import 'package:class_one/components/screens/bottom_navigation.dart';
 import 'package:class_one/components/screens/counter_screen.dart';
 import 'package:class_one/components/screens/gridview_screen.dart';
 import 'package:class_one/components/screens/listview_screen.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => LoginScreen(),
-        '/home': (context) => GridviewScreen(),
+        '/home': (context) => BottomNavigationScreen(),
         '/detail': (context) => ListviewScreen(),
         '/addTodo': (context) => TodosScreen(),
         '/counter': (context) => const MyCounter()

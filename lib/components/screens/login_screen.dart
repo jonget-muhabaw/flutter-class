@@ -71,16 +71,16 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   spacing: 20,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.all(10),
-                      alignment: Alignment.centerRight,
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.pushNamed(context, '/counter');
-                        },
-                        child: const Text("Go To Counter APP"),
-                      ),
-                    ),
+                    // Container(
+                    //   padding: const EdgeInsets.all(10),
+                    //   alignment: Alignment.centerRight,
+                    //   child: GestureDetector(
+                    //     onTap: () {
+                    //       Navigator.pushNamed(context, '/counter');
+                    //     },
+                    //     child: const Text("Go To Counter APP"),
+                    //   ),
+                    // ),
                     Container(
                       color: Colors.black,
                       height: MediaQuery.of(context).size.height * 0.06,

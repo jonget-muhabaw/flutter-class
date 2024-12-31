@@ -15,6 +15,9 @@ class ListviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: const Text("Products Screen"),
+        ),
         body: ListView.builder(
             itemCount: _products.length,
             itemBuilder: (context, index) {

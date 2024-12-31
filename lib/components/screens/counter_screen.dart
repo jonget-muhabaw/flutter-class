@@ -10,12 +10,15 @@ class MyCounter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<CounterProvider>(builder: (contex, counterProvider, child) {
       return Scaffold(
+        appBar: AppBar(
+          title: const Text("Counter Screen"),
+        ),
         body: Center(child: Text('${counterProvider.count}')),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             counterProvider.increment();
           },
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ),
       );
     });

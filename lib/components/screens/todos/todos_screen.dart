@@ -11,7 +11,7 @@ class TodosScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey,
       resizeToAvoidBottomInset: true,
-      body: Consumer<TodosProvider>(builder: (contex, todos, child) {
+      body: Consumer<TodosProvider>(builder: (contex, todosProvider, child) {
         return Column(
           children: [
             Container(
@@ -26,7 +26,7 @@ class TodosScreen extends StatelessWidget {
               alignment: Alignment.topRight,
               child: TextButton(
                 onPressed: () {
-                  todos.addTodos(todoController.text);
+                  todosProvider.addTodos(todoController.text);
                 },
                 style: TextButton.styleFrom(
                     padding: const EdgeInsets.symmetric(
@@ -46,7 +46,7 @@ class TodosScreen extends StatelessWidget {
             ),
             Expanded(
               child: ListView.builder(
-                  itemCount: todos.todos.length,
+                  itemCount: todosProvider.todos.length,
                   itemBuilder: (context, idx) {
                     return Container(
                       height: 70,
@@ -60,13 +60,13 @@ class TodosScreen extends StatelessWidget {
                         margin: const EdgeInsets.symmetric(vertical: 10),
                         child: ListTile(
                           title: Text(
-                            todos.todos[idx],
+                            todosProvider.todos[idx],
                             style: const TextStyle(
                                 color: Colors.black, fontSize: 12),
                           ),
                           trailing: TextButton(
                               onPressed: () {
-                                todos.removeTodos(idx);
+                                todosProvider.removeTodos(idx);
                               },
                               child: const Text("Remove")),
                         ),
